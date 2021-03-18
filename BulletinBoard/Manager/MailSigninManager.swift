@@ -20,7 +20,7 @@ final class MailManager : ObservableObject {
             if err == nil{
                 print("Create New Acccount")
                 cmc(0)
-            }else {
+            } else {
                 if let errcode = AuthErrorCode(rawValue: err!._code){
                     switch errcode {
                     case .invalidEmail: //メールアドレスフォーマットエラー
@@ -29,6 +29,32 @@ final class MailManager : ObservableObject {
                         cmc(2)
                     default: 
                         cmc(3)
+                    }
+                }
+            }
+        })
+    }
+    
+    
+    // UserLogin
+    func LoginMail(mailaddress:String,password:String,cmc:@escaping CompletionClosure) {
+        FBauth.signIn(withEmail: mailaddress, password: password, completion: {(result,err) in
+            if err != nil {
+                print("Signin Success!")
+                cmc(0)
+            } else {
+                if let errcode = AuthErrorCode(rawValue: err!._code){
+                    switch errcode {
+                    case .invalidEmail: //メールアドレスフォーマットエラー
+                        cmc(1)
+                    case .wrongPassword: //パスワードミスマッチ
+                        cmc(2)
+                    case .userNotFound: //ユーザが存在しない
+                        cmc(3)
+                    case .userDisabled: //アカウント無効
+                        cmc(4)
+                    default:
+                        cmc(5)
                     }
                 }
             }
