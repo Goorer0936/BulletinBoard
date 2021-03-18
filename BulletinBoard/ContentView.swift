@@ -8,13 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject private var mailmanager = MailManager()
     var body: some View {
-        Button(action: {
-            mailmanager.CreateAccountMail(mailaddress: "aaaa@ssss.com", password: "bbbbbbbb")
-        }, label: {
-            Text("Create")
-        })
+        SigninView()
     }
 }
 

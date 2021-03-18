@@ -18,6 +18,8 @@
 		CC5CBEF7260223F000AEF973 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC5CBEF6260223F000AEF973 /* GoogleService-Info.plist */; };
 		CC5CBF252602B0F700AEF973 /* MailSigninManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5CBF242602B0F700AEF973 /* MailSigninManager.swift */; };
 		CC5CBF282602B9B100AEF973 /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5CBF272602B9B100AEF973 /* SigninView.swift */; };
+		CC5CBF2B2602BD2C00AEF973 /* MailSigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5CBF2A2602BD2C00AEF973 /* MailSigninView.swift */; };
+		CC5CBF642602D5EF00AEF973 /* MailLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5CBF632602D5EF00AEF973 /* MailLoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		CC5CBEF6260223F000AEF973 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CC5CBF242602B0F700AEF973 /* MailSigninManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailSigninManager.swift; sourceTree = "<group>"; };
 		CC5CBF272602B9B100AEF973 /* SigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
+		CC5CBF2A2602BD2C00AEF973 /* MailSigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailSigninView.swift; sourceTree = "<group>"; };
+		CC5CBF632602D5EF00AEF973 /* MailLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailLoginView.swift; sourceTree = "<group>"; };
 		CFF59C504DCFA198444F3E85 /* Pods-BulletinBoard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BulletinBoard.debug.xcconfig"; path = "Target Support Files/Pods-BulletinBoard/Pods-BulletinBoard.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +118,8 @@
 		CC5CBEED2602218700AEF973 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CC5CBF622602D5DB00AEF973 /* Login */,
+				CC5CBF2D2602BD3000AEF973 /* Signin */,
 				CC5CBEF02602219900AEF973 /* Support */,
 				CC5CBF272602B9B100AEF973 /* SigninView.swift */,
 			);
@@ -141,6 +147,22 @@
 			children = (
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		CC5CBF2D2602BD3000AEF973 /* Signin */ = {
+			isa = PBXGroup;
+			children = (
+				CC5CBF2A2602BD2C00AEF973 /* MailSigninView.swift */,
+			);
+			path = Signin;
+			sourceTree = "<group>";
+		};
+		CC5CBF622602D5DB00AEF973 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CC5CBF632602D5EF00AEF973 /* MailLoginView.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,7 +285,9 @@
 				CC5CBF282602B9B100AEF973 /* SigninView.swift in Sources */,
 				CC5CBEDB260220FC00AEF973 /* SceneDelegate.swift in Sources */,
 				CC5CBEF2260221B500AEF973 /* UserModel.swift in Sources */,
+				CC5CBF642602D5EF00AEF973 /* MailLoginView.swift in Sources */,
 				CC5CBEDD260220FC00AEF973 /* ContentView.swift in Sources */,
+				CC5CBF2B2602BD2C00AEF973 /* MailSigninView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

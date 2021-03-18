@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct SigninView: View {
+    @State private var ismailviewshow : Bool = false
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: {
+            self.ismailviewshow = true
+        }, label: {
+            Text("CreateButton")
+        })
+        .sheet(isPresented:self.$ismailviewshow){
+            MailSigninView()
+        }
     }
 }
 

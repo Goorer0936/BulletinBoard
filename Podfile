@@ -7,4 +7,5 @@ target 'BulletinBoard' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'PKHUD'
 end
